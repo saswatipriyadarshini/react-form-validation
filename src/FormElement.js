@@ -1,11 +1,21 @@
 import React from 'react';
 
-function FormElement(x) {
+function FormComponent(prop) {
   return (
-    <div className='form-group'>
-
+    <div className=''>
+      <label>{prop.name}</label>
+      <input
+        type={prop.type}
+        name={prop.inputname}
+        placeholder={prop.placeholder}
+        id={prop.id}
+        className={prop.className}
+        value={prop.value}
+        onChange={prop.changeHandler}
+      />
+      <span>{prop.error}</span>
     </div>
   );
 }
 
-export default FormElement;
+export default FormComponent;
